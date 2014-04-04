@@ -15,6 +15,6 @@ out = im.convert("P", palette=Image.ADAPTIVE, colors=colors).convert('RGB')
 out.show()
 
 for count, rgb_tuple in out.getcolors():
-    print "Count: {} ... rgb: {}".format(count, rgb_tuple)
+    print "Count:{} rgb:#{:02x}{:02x}{:02x}".format(count, *rgb_tuple)
     color_image = Image.new("RGB", (200, 200), rgb_tuple)
     color_image.show()

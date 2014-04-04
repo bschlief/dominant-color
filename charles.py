@@ -76,4 +76,9 @@ def kmeans(points, k, min_diff):
 
     return clusters
 
-print colorz(filename, colors)
+im = Image.open(filename)
+im.show()
+for hex_string in colorz(filename, colors):
+    print "rgb: {}".format(hex_string)
+    color_image = Image.new("RGB", (200, 200), hex_string)
+    color_image.show()
