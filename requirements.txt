@@ -1,0 +1,2 @@
+Pillow==2.4.0
+wsgiref==0.1.2
